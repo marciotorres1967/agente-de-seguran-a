@@ -1,0 +1,22 @@
+{
+  "name": "portal-sst-brasil",
+  "version": "1.0.0",
+  "description": "PORTAL SST BRASIL — Segurança, Saúde e Prevenção. O maior portal nacional de consulta a Normas Regulamentadoras, Legislação Trabalhista e Gestão de Riscos Ocupacionais.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "sst",
+    "seguranca-do-trabalho",
+    "normas-regulamentadoras",
+    "nr",
+    "clt",
+    "pgr",
+    "pcmso",
+    "cipa",
+    "esocial"
+  ],
+  "author": "Portal SST Brasil",
+  "license": "MIT"
+}

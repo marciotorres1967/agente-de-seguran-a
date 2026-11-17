@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTAL SST BRASIL — Segurança, Saúde e Prevenção | Normas Regulamentadoras & Legislação</title>
+  <meta name="description"
+    content="O maior portal nacional de consulta a Normas Regulamentadoras (NR-01 a NR-38), Legislação Trabalhista, Previdenciária, Gerenciamento de Riscos Ocupacionais (GRO/PGR), eSocial e Inteligência Artificial especializada em SST.">
+  <meta name="keywords"
+    content="SST, Segurança do Trabalho, Normas Regulamentadoras, NR 01 a NR 38, PGR, PCMSO, CIPA, eSocial SST, CLT Art 154 a 201, EPI, CA">
+  <meta name="author" content="Portal SST Brasil">
+  <meta name="robots" content="index, follow">
+
+  <!-- Estilos Principais -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+</head>
+
+<body>
+
+  <!-- Topbar com Notícias Oficiais e Links Rápidos -->
+  <aside class="topbar">
+    <div class="container topbar-content">
+      <div style="display:flex;align-items:center;">
+        <span class="topbar-badge">OFICIAL</span>
+        <span>Conforme Portarias Vigentes do Ministério do Trabalho e Emprego (Gov.br)</span>
+      </div>
+      <div class="topbar-links">
+        <a href="https://www.gov.br/trabalho-e-emprego/pt-br" target="_blank" rel="noopener noreferrer"
+          class="topbar-link">Ministério do Trabalho</a>
+        <a href="https://www.in.gov.br" target="_blank" rel="noopener noreferrer" class="topbar-link">Diário Oficial da
+          União</a>
+        <a href="https://www.gov.br/fundacentro/pt-br" target="_blank" rel="noopener noreferrer"
+          class="topbar-link">Fundacentro</a>
+        <a href="https://www.gov.br/esocial/pt-br" target="_blank" rel="noopener noreferrer"
+          class="topbar-link">eSocial</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay de Fundo do Menu Hambúrguer -->
+  <div class="mobile-drawer-backdrop" id="mobile-drawer-backdrop" onclick="window.closeMobileDrawer()"></div>
+
+  <!-- Menu Hambúrguer na Lateral do Site (Drawer Deslizante) -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Menu de Navegação Lateral">
+    <div class="mobile-drawer-header">
+      <div class="brand">
+        <div class="brand-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            <path d="m9 12 2 2 4-4" />
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h2 style="font-size:1.1rem;font-weight:900;color:#fff;">PORTAL SST</h2>
+          <span style="font-size:0.68rem;font-weight:600;color:var(--green-light);">Menu Principal</span>
+        </div>
+      </div>
+      <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Fechar menu lateral"
+        onclick="window.closeMobileDrawer()">&times;</button>
+    </div>
+
+    <!-- Campo de Busca no Menu Lateral -->
+    <div class="mobile-drawer-search">
+      <input type="text" id="mobile-drawer-search-input" placeholder="Buscar NR, risco, EPI, lei..." autocomplete="off">
+      <svg class="mobile-drawer-search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    </div>
+
+    <!-- Ação de Destaque: Assistente IA -->
+    <div class="mobile-drawer-cta">
+      <button class="btn btn-green" onclick="window.closeMobileDrawer(); window.navigateTo('ai');"
+        style="width:100%;font-size:0.875rem;padding:0.7rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="16" height="12" x="4" y="8" rx="2" />
+          <path d="M2 14h2" />
+          <path d="M20 14h2" />
+          <path d="M15 13v2" />
+          <path d="M9 13v2" />
+        </svg>
+        Assistente IA SST Inteligente
+      </button>
+    </div>
+
+    <!-- Lista Completa de Navegação no Menu Lateral -->
+    <nav class="mobile-drawer-nav">
+      <div class="mobile-nav-group-title">Navegação do Portal</div>
+      <ul class="mobile-nav-list">
+        <li>
+          <a href="#home" class="mobile-nav-link active" data-view="home" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">🏠</span>
+            <span>Início</span>
+          </a>
+        </li>
+        <li>
+          <a href="#nrs" class="mobile-nav-link" data-view="nrs" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">📖</span>
+            <span>Normas Regulamentadoras (1 a 38)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#legislation" class="mobile-nav-link" data-view="legislation" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">⚖️</span>
+            <span>Legislação Trabalhista & Previdência</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gro" class="mobile-nav-link" data-view="gro" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">⚠️</span>
+            <span>Gerenciamento de Riscos (GRO)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#pgr" class="mobile-nav-link" data-view="pgr" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">📋</span>
+            <span>PGR (Inventário & Ação)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#pcmso" class="mobile-nav-link" data-view="pcmso" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">🩺</span>
+            <span>PCMSO & Saúde Ocupacional</span>
+          </a>
+        </li>
+        <li>
+          <a href="#epis" class="mobile-nav-link" data-view="epis" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">⛑️</span>
+            <span>EPI & EPC (NR-06)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#cipa" class="mobile-nav-link" data-view="cipa" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">👥</span>
+            <span>CIPA & Combate ao Assédio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#trainings" class="mobile-nav-link" data-view="trainings" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">🎓</span>
+            <span>Treinamentos & Capacitações</span>
+          </a>
+        </li>
+        <li>
+          <a href="#accidents" class="mobile-nav-link" data-view="accidents" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">🚨</span>
+            <span>Acidentes de Trabalho & CAT</span>
+          </a>
+        </li>
+        <li>
+          <a href="#esocial" class="mobile-nav-link" data-view="esocial" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">💻</span>
+            <span>eSocial SST (S-2210/2220/2240)</span>
+          </a>
+        </li>
+        <li>
+          <a href="#tools" class="mobile-nav-link" data-view="tools" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">🧮</span>
+            <span>Ferramentas & Calculadoras</span>
+          </a>
+        </li>
+        <li>
+          <a href="#documents" class="mobile-nav-link" data-view="documents" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">📄</span>
+            <span>Modelos de Documentos & Downloads</span>
+          </a>
+        </li>
+        <li>
+          <a href="#news" class="mobile-nav-link" data-view="news" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">📰</span>
+            <span>Notícias & Alertas Oficiais</span>
+          </a>
+        </li>
+        <li>
+          <a href="#admin" class="mobile-nav-link" data-view="admin" onclick="window.closeMobileDrawer()">
+            <span class="mobile-nav-icon">⚙️</span>
+            <span>Painel Administrativo & Auditoria</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Rodapé do Menu Lateral -->
+    <div class="mobile-drawer-footer">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:0.75rem;margin-bottom:0.75rem;">
+        <button class="btn btn-outline" onclick="window.openLoginModal(); window.closeMobileDrawer();"
+          style="flex:1;font-size:0.85rem;padding:0.6rem;background:rgba(255,255,255,0.06);color:#fff;border-color:rgba(255,255,255,0.15);">
+          👤 Área do Usuário
+        </button>
+        <button class="theme-toggle-btn" title="Alternar Modo Claro / Escuro"
+          style="border:1px solid rgba(255,255,255,0.2);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+      </div>
+      <div style="font-size:0.725rem;color:rgba(255,255,255,0.5);text-align:center;">
+        PORTAL SST BRASIL &copy; 2026
+      </div>
+    </div>
+  </aside>
+
+  <!-- Cabeçalho Principal do Portal -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div style="display:flex;align-items:center;gap:0.75rem;">
+        <!-- Botão Menu Hambúrguer (Mobile / Tablet) -->
+        <button class="btn-hamburger" id="btn-hamburger" aria-label="Abrir menu de navegação" title="Menu de navegação">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Logotipo & Nome do Portal -->
+        <a href="#home" class="brand" onclick="window.navigateTo('home')">
+          <div class="brand-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1>PORTAL SST BRASIL</h1>
+            <span>Segurança, Saúde e Prevenção</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Campo de Pesquisa do Cabeçalho -->
+      <div class="header-search">
+        <input type="text" id="header-search-input" placeholder="Pesquisar NR, lei, risco, EPI ou assunto..."
+          autocomplete="off">
+        <div class="header-search-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Ações do Cabeçalho -->
+      <div class="header-actions">
+        <button class="btn-ai-nav" onclick="window.navigateTo('ai')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="16" height="12" x="4" y="8" rx="2" />
+            <path d="M2 14h2" />
+            <path d="M20 14h2" />
+            <path d="M15 13v2" />
+            <path d="M9 13v2" />
+          </svg>
+          Assistente IA SST
+        </button>
+
+        <button class="theme-toggle-btn" title="Alternar Modo Claro / Escuro" aria-label="Alternar Tema">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+        </button>
+
+        <button class="btn-user-profile" onclick="window.openLoginModal()" title="Área do Usuário">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span id="header-user-label">Entrar / Cadastro</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de Navegação Horizontal -->
+    <nav class="site-nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-item active" data-view="home">Início</a></li>
+          <li><a href="#nrs" class="nav-item" data-view="nrs">Normas Regulamentadoras (1 a 38)</a></li>
+          <li><a href="#legislation" class="nav-item" data-view="legislation">Legislação (CLT & Previdência)</a></li>
+          <li><a href="#gro" class="nav-item" data-view="gro">Gerenciamento de Riscos (GRO)</a></li>
+          <li><a href="#pgr" class="nav-item" data-view="pgr">PGR</a></li>
+          <li><a href="#pcmso" class="nav-item" data-view="pcmso">PCMSO & Saúde</a></li>
+          <li><a href="#epis" class="nav-item" data-view="epis">EPI & EPC</a></li>
+          <li><a href="#cipa" class="nav-item" data-view="cipa">CIPA & Assédio</a></li>
+          <li><a href="#trainings" class="nav-item" data-view="trainings">Treinamentos</a></li>
+          <li><a href="#accidents" class="nav-item" data-view="accidents">Acidentes & CAT</a></li>
+          <li><a href="#esocial" class="nav-item" data-view="esocial">eSocial SST</a></li>
+          <li><a href="#tools" class="nav-item" data-view="tools">Ferramentas Gratuitas</a></li>
+          <li><a href="#documents" class="nav-item" data-view="documents">Modelos & Downloads</a></li>
+          <li><a href="#news" class="nav-item" data-view="news">Notícias & Alertas</a></li>
+          <li><a href="#admin" class="nav-item" data-view="admin">Painel Administrativo</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       VIEW 1: PÁGINA INICIAL (HOME)
+       ========================================================================= -->
+  <main id="view-home" class="view-container active">
+    <!-- Banner Principal com Mensagem Obrigatória -->
+    <section class="hero-banner">
+      <div class="container hero-content">
+        <div class="hero-tag">
+          Portal Nacional de Segurança e Saúde no Trabalho
+        </div>
+        <h2 class="hero-title">
+          "SEGURANÇA DO TRABALHO NÃO É APENAS UMA OBRIGAÇÃO. É UM COMPROMISSO COM A VIDA."
+        </h2>
+        <p class="hero-subtitle">
+          Consulte Normas Regulamentadoras, legislação, procedimentos, orientações técnicas e conteúdos atualizados
+          sobre Segurança e Saúde no Trabalho.
+        </p>
+
+        <!-- Campo de Pesquisa do Banner com a frase exata solicitada -->
+        <div class="hero-search-wrapper">
+          <div class="hero-search-box">
+            <input type="text" id="hero-search-input" class="hero-search-input"
+              placeholder="Pesquise uma NR, legislação, risco ocupacional, EPI, procedimento ou assunto de SST..."
+              autocomplete="off">
+            <button class="hero-search-btn"
+              onclick="const input = document.getElementById('hero-search-input'); if(input.value) { window.navigateTo('nrs'); }">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              Pesquisar
+            </button>
+          </div>
+
+          <!-- Sugestões Rápidas -->
+          <div class="hero-badges-quick">
+            <span>Mais buscados:</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-35')">NR-35 Altura</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-01')">NR-01 GRO/PGR</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-06')">NR-06 EPI & CA</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-10')">NR-10 Eletricidade</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-12')">NR-12 Máquinas</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('nr-detail', 'nr-33')">NR-33 Confinado</span>
+            <span class="hero-quick-tag" onclick="window.navigateTo('esocial')">eSocial S-2240</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards de Acesso Rápido (12 Cards Oficiais) -->
+    <section class="quick-access-section container">
+      <div class="quick-cards-grid" id="quick-cards-grid">
+        <!-- Renderizado dinamicamente pelo app.js -->
+      </div>
+    </section>
+
+    <!-- Normas Mais Consultadas -->
+    <section class="section container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2>Normas Regulamentadoras Mais Consultadas</h2>
+          <p>Acesse o texto oficial, anexos, obrigações e requisitos técnicos das NRs de maior impacto.</p>
+        </div>
+        <button class="section-action-btn" onclick="window.navigateTo('nrs')">
+          Ver todas as 38 NRs →
+        </button>
+      </div>
+      <div class="nrs-grid" id="home-popular-nrs">
+        <!-- Inserido dinamicamente -->
+      </div>
+    </section>
+
+    <!-- Alertas Legislativos e Notícias Recentes -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <h2>Últimas Atualizações das NRs & Notícias Oficiais</h2>
+            <p>Acompanhamento permanente de portarias, consultas públicas e mudanças legislativas.</p>
+          </div>
+          <button class="section-action-btn" onclick="window.navigateTo('news')">
+            Ver todas as atualizações →
+          </button>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.25rem;"
+          id="home-latest-updates">
+          <!-- Inserido dinamicamente -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Perguntas Frequentes (FAQ) -->
+    <section class="section container">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2>Dúvidas Frequentes em Segurança e Saúde no Trabalho</h2>
+          <p>Respostas diretas e fundamentadas às principais questões técnicas e jurídicas do setor.</p>
+        </div>
+      </div>
+      <div id="faq-accordion-container" style="max-width:900px;margin:0 auto;">
+        <!-- Inserido dinamicamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 2: BIBLIOTECA COMPLETA DAS NRs (1 A 38)
+       ========================================================================= -->
+  <main id="view-nrs" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Biblioteca Digital das Normas Regulamentadoras (NRs)</h2>
+          <p>Acervo completo de todas as 38 normas brasileiras vigentes e revogadas com histórico, anexos e fichas
+            oficiais.</p>
+        </div>
+      </div>
+
+      <!-- Barra de Filtros de NRs -->
+      <div class="nr-filter-bar">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-status="todos">Todas as 38 NRs</button>
+          <button class="filter-pill" data-status="vigente">Normas Vigentes</button>
+          <button class="filter-pill" data-status="revogada">Normas Revogadas (Histórico)</button>
+        </div>
+        <div class="filter-search-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" id="nr-search-filter" placeholder="Filtrar por número ou palavra-chave...">
+        </div>
+      </div>
+
+      <!-- Grid com as 38 NRs -->
+      <div class="nrs-grid" id="nrs-list-grid">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 3: PÁGINA INDIVIDUAL DE CADA NR (RENDER DINÂMICO)
+       ========================================================================= -->
+  <main id="view-nr-detail" class="view-container">
+    <!-- Renderizado dinamicamente com todas as 20 informações oficiais -->
+  </main>
+
+  <!-- =========================================================================
+       VIEW 4: LEGISLAÇÃO TRABALHISTA E PREVIDENCIÁRIA
+       ========================================================================= -->
+  <main id="view-legislation" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Legislação Trabalhista e Previdenciária de SST</h2>
+          <p>Dispositivos da Constituição Federal de 1988, CLT Capítulo V (arts. 154 a 201), Leis 8.213/91, 6.514/77 e
+            Decretos.</p>
+        </div>
+      </div>
+      <div id="legislation-cards-container">
+        <!-- Inserido dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 5: ASSISTENTE SST INTELIGENTE (IA)
+       ========================================================================= -->
+  <main id="view-ai" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Assistente SST Inteligente</h2>
+          <p>Inteligência artificial técnica com respostas 100% fundamentadas no texto vigente das Normas
+            Regulamentadoras e leis brasileiras.</p>
+        </div>
+      </div>
+
+      <div class="ai-chat-wrapper">
+        <div class="ai-chat-header">
+          <div class="ai-chat-header-info">
+            <div class="ai-avatar-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="16" height="12" x="4" y="8" rx="2" />
+                <path d="M2 14h2" />
+                <path d="M20 14h2" />
+                <path d="M15 13v2" />
+                <path d="M9 13v2" />
+              </svg>
+            </div>
+            <div>
+              <h3 style="font-size:1.15rem;font-weight:800;">Assistente Especializado em SST</h3>
+              <span style="font-size:0.775rem;color:rgba(255,255,255,0.85);">Base de dados: NRs 1 a 38, CLT Cap. V, Leis
+                Previdenciárias e Portarias MTE</span>
+              <div id="ai-agent-status" class="ai-agent-status">● Verificando conexão com o agente…</div>
+            </div>
+          </div>
+          <button class="btn btn-outline"
+            style="color:#fff;border-color:rgba(255,255,255,0.3);font-size:0.775rem;padding:0.3rem 0.75rem;"
+            onclick="window.AIAssistant.clearHistory(); window.location.reload();">
+            Limpar Conversa
+          </button>
+        </div>
+
+        <!-- Área de Mensagens -->
+        <div class="ai-messages-area" id="ai-messages-area">
+          <!-- Inserido dinamicamente -->
+        </div>
+
+        <!-- Prompts Rápidos Sugeridos -->
+        <div class="ai-prompts-tray">
+          <span style="font-size:0.75rem;font-weight:700;color:var(--text-light);flex-shrink:0;">Perguntas
+            Frequentes:</span>
+          <button class="ai-prompt-chip" data-prompt="O que determina a NR-35?">O que determina a NR-35?</button>
+          <button class="ai-prompt-chip"
+            data-prompt="Quais são os requisitos para trabalho em espaço confinado?">Requisitos para espaço
+            confinado?</button>
+          <button class="ai-prompt-chip" data-prompt="Quando uma empresa precisa elaborar o PGR?">Quando é obrigatório o
+            PGR?</button>
+          <button class="ai-prompt-chip"
+            data-prompt="Quais são as responsabilidades do empregador na NR-6?">Responsabilidades da NR-6?</button>
+          <button class="ai-prompt-chip"
+            data-prompt="Qual a diferença entre insalubridade e periculosidade?">Insalubridade vs
+            Periculosidade</button>
+          <button class="ai-prompt-chip" data-prompt="Quais são os prazos dos eventos de SST no eSocial?">Prazos eSocial
+            SST</button>
+        </div>
+
+        <!-- Formulário de Pergunta -->
+        <form class="ai-input-form" id="ai-chat-form">
+          <input type="text" id="ai-user-input"
+            placeholder="Faça uma pergunta sobre NRs, CLT, insalubridade, EPI, CIPA, eSocial..." autocomplete="off">
+          <button type="submit" class="ai-send-btn" title="Enviar pergunta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 6: GERENCIAMENTO DE RISCOS OCUPACIONAIS (GRO)
+       ========================================================================= -->
+  <main id="view-gro" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Gerenciamento de Riscos Ocupacionais (GRO / NR-01)</h2>
+          <p>Classificação sistemática de perigos, riscos, limites de tolerância e hierarquia oficial de medidas de
+            controle.</p>
+        </div>
+      </div>
+
+      <!-- Hierarquia de Controles -->
+      <div class="tech-card" style="margin-bottom:2rem;">
+        <h3>Hierarquia Obrigatória de Medidas de Prevenção (Item 1.4.1 da NR-01)</h3>
+        <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1rem;">A organização deve adotar medidas de
+          prevenção seguindo a seguinte ordem de prioridade:</p>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="background:#D1FAE5;border-left:5px solid #059669;padding:0.85rem;border-radius:4px;">
+            <strong>1. Eliminação do Perigo:</strong> Eliminar a fonte do risco nos processos de trabalho antes de
+            qualquer outra medida.
+          </div>
+          <div style="background:#E0F2FE;border-left:5px solid #1E6091;padding:0.85rem;border-radius:4px;">
+            <strong>2. Substituição:</strong> Substituir o material, composto ou processo nocivo por alternativa não
+            perigosa ou de menor risco.
+          </div>
+          <div style="background:#FEF3C7;border-left:5px solid #F59E0B;padding:0.85rem;border-radius:4px;">
+            <strong>3. Medidas de Proteção Coletiva (EPC / Engenharia):</strong> Isolar os trabalhadores do perigo
+            (guarda-corpos, exaustão, enclausuramento).
+          </div>
+          <div style="background:#F1F5F9;border-left:5px solid #475569;padding:0.85rem;border-radius:4px;">
+            <strong>4. Medidas Administrativas e Procedimentos:</strong> Sinalizações, rodízios de trabalhadores,
+            capacitação e ordens de serviço.
+          </div>
+          <div style="background:#FEE2E2;border-left:5px solid #EF4444;padding:0.85rem;border-radius:4px;">
+            <strong>5. Equipamento de Proteção Individual (EPI):</strong> Última linha de defesa quando as anteriores
+            forem inviáveis ou temporárias.
+          </div>
+        </div>
+      </div>
+
+      <!-- Categorias de Riscos (Físicos, Químicos, Biológicos, Ergonômicos, Acidentes) -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;">
+        <div class="tech-card">
+          <span class="badge" style="background:#E0F2FE;color:#2563EB;margin-bottom:0.5rem;">Riscos Físicos</span>
+          <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;">Ruído, Calor, Vibração, Radiações e Frio
+          </h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">Formas de energia
+            com limites de exposição avaliados conforme NR-09, NR-15 e NHOs da Fundacentro.</p>
+          <ul class="obligations-list" style="font-size:0.825rem;">
+            <li>Ruído: Limite de 85 dB(A) para 8h (Nível de ação: 80 dB(A)).</li>
+            <li>Calor: Avaliação de sobrecarga térmica com termômetro de globo (IBUTG).</li>
+            <li>Vibração: VMB (limite aren 5 m/s²) e VCI (limite aren 1,1 m/s²).</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge" style="background:#FEE2E2;color:#DC2626;margin-bottom:0.5rem;">Riscos Químicos</span>
+          <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;">Poeiras, Fumos, Gases, Vapores e Solventes
+          </h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">Substâncias que
+            penetram por via respiratória ou contato dérmico.</p>
+          <ul class="obligations-list" style="font-size:0.825rem;">
+            <li>Sílica Cristalina: Avaliação da fração respirável (risco de silicose).</li>
+            <li>Benzeno: Regulamentado pelo Anexo II da NR-09.</li>
+            <li>Rotulagem preventiva segundo o GHS e Ficha FDS (antiga FISPQ - NR-26).</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge" style="background:#D1FAE5;color:#059669;margin-bottom:0.5rem;">Riscos Biológicos</span>
+          <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;">Vírus, Bactérias, Fungos e Parasitas</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">Patógenos
+            presentes em serviços de saúde, esgoto e lixo urbano.</p>
+          <ul class="obligations-list" style="font-size:0.825rem;">
+            <li>Serviços de Saúde: Dispositivos de segurança em perfurocortantes (NR-32).</li>
+            <li>Limpeza Urbana: Coleta de lixo e vestimentas adequadas (NR-38).</li>
+            <li>Esquema vacinal ocupacional obrigatório (Hepatite B, Tétano).</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge" style="background:#FEF3C7;color:#D97706;margin-bottom:0.5rem;">Riscos Ergonômicos</span>
+          <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;">Posturas, Cargas, Repetitividade e
+            Psicossociais</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">Adaptação
+            psicofisiológica do trabalho regida pela NR-17.</p>
+          <ul class="obligations-list" style="font-size:0.825rem;">
+            <li>Avaliação Ergonômica Preliminar (AEP) obrigatória no PGR.</li>
+            <li>Análise Ergonômica do Trabalho (AET) para demandas complexas.</li>
+            <li>Prevenção e combate ao assédio e violência laboral (Lei 14.457/2022).</li>
+          </ul>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge" style="background:#EDE9FE;color:#7C3AED;margin-bottom:0.5rem;">Riscos de Acidentes</span>
+          <h4 style="font-size:1.15rem;font-weight:800;margin-bottom:0.4rem;">Quedas, Choques, Prensagem e Explosões
+          </h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">Fatores com perigo
+            iminente de dano físico instantâneo ao trabalhador.</p>
+          <ul class="obligations-list" style="font-size:0.825rem;">
+            <li>Trabalho em Altura: SPCQ e proteção contra quedas acima de 2m (NR-35).</li>
+            <li>Máquinas: Proteções físicas intertravadas em zonas de perigo (NR-12).</li>
+            <li>Eletricidade: Desenergização em 6 passos e bloqueio LOTO (NR-10).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 7: PROGRAMA DE GERENCIAMENTO DE RISCOS (PGR)
+       ========================================================================= -->
+  <main id="view-pgr" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Módulo PGR — Programa de Gerenciamento de Riscos</h2>
+          <p>Estruturação obrigatória do PGR, Inventário de Riscos, Plano de Ação e Matriz de Riscos 5x5.</p>
+        </div>
+      </div>
+
+      <div class="tech-card" style="margin-bottom:2rem;">
+        <h3>Conceito e Composição do PGR (NR-01)</h3>
+        <p style="font-size:0.95rem;color:var(--text-muted);line-height:1.6;margin-bottom:1rem;">
+          O PGR não é um relatório estático anual, mas sim um processo contínuo de gestão que materializa o GRO.
+          Deve contemplar todos os perigos e conter, no mínimo:
+        </p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+          <div
+            style="background:var(--bg-subtle);padding:1.25rem;border-radius:var(--radius-md);border-left:4px solid var(--blue-accent);">
+            <h4 style="font-size:1.05rem;font-weight:800;color:var(--primary);margin-bottom:0.4rem;">1. Inventário de
+              Riscos Ocupacionais</h4>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
+              Identifica os perigos, processos, atividades, trabalhadores expostos, fontes geradoras, medidas de
+              controle existentes e dados das avaliações ambientais com classificação do nível de risco.
+            </p>
+          </div>
+          <div
+            style="background:var(--bg-subtle);padding:1.25rem;border-radius:var(--radius-md);border-left:4px solid var(--green);">
+            <h4 style="font-size:1.05rem;font-weight:800;color:var(--green);margin-bottom:0.4rem;">2. Plano de Ação</h4>
+            <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">
+              Define as medidas de prevenção a serem introduzidas, aprimoradas ou mantidas, com cronograma, metas
+              mensuráveis, prazos, formas de acompanhamento e responsáveis designados.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Matriz 5x5 Interativa do PGR -->
+      <div class="tech-card">
+        <h3>Simulador da Matriz de Avaliação de Risco 5x5 (Severidade × Probabilidade)</h3>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1rem;">
+          Clique em qualquer célula da matriz abaixo para calcular o nível de risco e a prioridade de ação no PGR:
+        </p>
+
+        <div style="display:flex;justify-content:center;">
+          <div class="matrix-container" id="matrix-interactive-grid">
+            <!-- Renderizado dinamicamente -->
+          </div>
+        </div>
+
+        <div id="matrix-result-details" class="result-card-calc">
+          <!-- Detalhes do score selecionado -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 8: PCMSO & SAÚDE OCUPACIONAL (NR-07)
+       ========================================================================= -->
+  <main id="view-pcmso" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Módulo PCMSO e Saúde Ocupacional (NR-07)</h2>
+          <p>Diretrizes médicas, exames ocupacionais obrigatórios, emissão de ASOs e integração com o PGR.</p>
+        </div>
+      </div>
+
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-bottom:2rem;">
+        <div class="tech-card">
+          <span class="badge badge-vigente">Exame Admissional</span>
+          <h4 style="font-size:1.1rem;font-weight:800;margin-top:0.4rem;margin-bottom:0.3rem;">Antes do Início do
+            Trabalho</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">Deve ser realizado antes que o
+            trabalhador assuma suas funções laborais na empresa.</p>
+        </div>
+        <div class="tech-card">
+          <span class="badge badge-blue">Exame Periódico</span>
+          <h4 style="font-size:1.1rem;font-weight:800;margin-top:0.4rem;margin-bottom:0.3rem;">Anual ou Bienal</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">Realizado anualmente para trabalhadores
+            expostos a riscos ou com menos de 18 / mais de 45 anos.</p>
+        </div>
+        <div class="tech-card">
+          <span class="badge badge-blue">Retorno ao Trabalho</span>
+          <h4 style="font-size:1.1rem;font-weight:800;margin-top:0.4rem;margin-bottom:0.3rem;">Afastamento &ge; 30 Dias
+          </h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">Obrigatório no primeiro dia da volta ao
+            trabalho após licença médica ou parto.</p>
+        </div>
+        <div class="tech-card">
+          <span class="badge badge-revogada">Exame Demissional</span>
+          <h4 style="font-size:1.1rem;font-weight:800;margin-top:0.4rem;margin-bottom:0.3rem;">Até 10 Dias do
+            Desligamento</h4>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;">Dispensado se o último exame tiver sido
+            realizado há menos de 135 dias (graus 1 e 2) ou 90 dias (graus 3 e 4).</p>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <h3>Proteção de Dados Médicos Sensíveis (LGPD e CFM)</h3>
+        <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.6;">
+          Conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018) e a Resolução CFM nº 2.323/2022, o prontuário
+          médico ocupacional é confidencial e deve permanecer sob a guarda estrita e exclusiva do Médico do Trabalho
+          coordenador por no mínimo 20 (vinte) anos após o desligamento do empregado. O Atestado de Saúde Ocupacional
+          (ASO) entregue ao RH deve conter unicamente a conclusão de "Apto" ou "Inapto", sendo terminantemente proibida
+          a menção de diagnósticos médicos ou códigos CID sem autorização expressa do trabalhador.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 9: EPI & EPC (NR-06)
+       ========================================================================= -->
+  <main id="view-epis" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Catálogo Técnico de EPIs e EPCs (NR-06)</h2>
+          <p>Especificações técnicas, critérios de CA, higienização, limitações e substituição de equipamentos de
+            proteção.</p>
+        </div>
+      </div>
+
+      <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:1rem;color:var(--primary);">Equipamentos de Proteção
+        Individual (EPIs)</h3>
+      <div class="nrs-grid" id="epis-catalog-grid" style="margin-bottom:3rem;">
+        <!-- Renderizado dinamicamente -->
+      </div>
+
+      <h3 style="font-size:1.3rem;font-weight:800;margin-bottom:1rem;color:var(--primary);">Equipamentos de Proteção
+        Coletiva (EPCs)</h3>
+      <div class="nrs-grid" id="epcs-catalog-grid">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 10: CIPA & COMBATE AO ASSÉDIO (NR-05)
+       ========================================================================= -->
+  <main id="view-cipa" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Comissão Interna de Prevenção de Acidentes e de Assédio (CIPA)</h2>
+          <p>NR-05 com as alterações da Lei nº 14.457/2022, dimensionamento oficial e processo eleitoral.</p>
+        </div>
+      </div>
+
+      <!-- Simulador de Dimensionamento da CIPA -->
+      <div class="calculator-card">
+        <h3>Simulador de Dimensionamento da CIPA (Quadro I da NR-05)</h3>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;">
+          Informe o Grau de Risco (1 a 4) e o total de empregados do estabelecimento para saber o número exato de
+          membros titulares e suplentes:
+        </p>
+        <form id="cipa-sim-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="cipa-gr">Grau de Risco da Atividade Principal:</label>
+              <select id="cipa-gr" required>
+                <option value="1">Grau de Risco 1 (Ex: Escritórios, Comércio Varejista)</option>
+                <option value="2">Grau de Risco 2 (Ex: Hotéis, Panificação, Logística)</option>
+                <option value="3" selected>Grau de Risco 3 (Ex: Indústrias Mecânicas, Transporte)</option>
+                <option value="4">Grau de Risco 4 (Ex: Construção Civil, Mineração, Química)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cipa-qtd">Número Total de Empregados no Estabelecimento:</label>
+              <input type="number" id="cipa-qtd" min="1" max="10000" value="85" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Dimensionar CIPA Oficial
+          </button>
+        </form>
+        <div id="cipa-sim-result" class="result-card-calc" style="display:none;"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 11: TREINAMENTOS E CAPACITAÇÕES
+       ========================================================================= -->
+  <main id="view-trainings" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Biblioteca Oficial de Treinamentos em SST</h2>
+          <p>Cargas horárias mínimas obrigatórias, modalidades (EaD/Presencial), ementas e reciclagens por NR.</p>
+        </div>
+      </div>
+      <div id="trainings-list-container">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 12: ACIDENTES DE TRABALHO, INVESTIGAÇÃO E INDICADORES
+       ========================================================================= -->
+  <main id="view-accidents" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Acidentes de Trabalho: Prevenção, Investigação e Taxas</h2>
+          <p>Conceito legal (Lei 8.213), emissão de CAT, Método Ishikawa (6M), 5 Porquês e Calculadora NBR 14280.</p>
+        </div>
+      </div>
+
+      <!-- Calculadora TF e TG -->
+      <div class="calculator-card">
+        <h3>Calculadora de Indicadores de Acidentes (NBR 14280)</h3>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;">
+          Calcule a Taxa de Frequência (TF) e a Taxa de Gravidade (TG) de acidentes da sua organização:
+        </p>
+        <form id="calc-tftg-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="tftg-n">Nº de Acidentes c/ Afastamento (N):</label>
+              <input type="number" id="tftg-n" min="0" value="2" required>
+            </div>
+            <div class="form-group">
+              <label for="tftg-perdidos">Total de Dias Perdidos:</label>
+              <input type="number" id="tftg-perdidos" min="0" value="18" required>
+            </div>
+            <div class="form-group">
+              <label for="tftg-debitados">Total de Dias Debitados (Incapacidade):</label>
+              <input type="number" id="tftg-debitados" min="0" value="0">
+            </div>
+            <div class="form-group">
+              <label for="tftg-hht">Horas-Homem Trabalhadas no Período (HHT):</label>
+              <input type="number" id="tftg-hht" min="1" value="240000" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Calcular TF e TG Oficiais
+          </button>
+        </form>
+        <div id="calc-tftg-result" class="result-card-calc" style="display:none;"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 13: eSOCIAL SST
+       ========================================================================= -->
+  <main id="view-esocial" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Guia Prático dos Eventos de SST no eSocial</h2>
+          <p>Manual oficial de preenchimento, prazos, Tabela 24 de agentes nocivos e emissão do PPP Eletrônico.</p>
+        </div>
+      </div>
+
+      <div
+        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
+        <div class="tech-card">
+          <span class="badge badge-revogada" style="margin-bottom:0.5rem;">Evento S-2210</span>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--text-main);margin-bottom:0.4rem;">Comunicação de
+            Acidente de Trabalho (CAT)</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">
+            <strong>Prazo:</strong> Até o primeiro dia útil seguinte ao acidente; em caso de morte, de imediato.</p>
+          <p style="font-size:0.825rem;color:var(--text-light);line-height:1.4;">Obrigatório mesmo quando o acidente não
+            provocar afastamento do trabalho.</p>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge badge-blue" style="margin-bottom:0.5rem;">Evento S-2220</span>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--text-main);margin-bottom:0.4rem;">Monitoramento da
+            Saúde do Trabalhador</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">
+            <strong>Prazo:</strong> Até o dia 15 do mês subsequente ao da emissão do ASO correspondente.</p>
+          <p style="font-size:0.825rem;color:var(--text-light);line-height:1.4;">Informa exames clínicos, complementares
+            e conclusão de aptidão física/mental.</p>
+        </div>
+
+        <div class="tech-card">
+          <span class="badge badge-vigente" style="margin-bottom:0.5rem;">Evento S-2240</span>
+          <h3 style="font-size:1.15rem;font-weight:800;color:var(--text-main);margin-bottom:0.4rem;">Condições
+            Ambientais (PPP Eletrônico)</h3>
+          <p style="font-size:0.85rem;color:var(--text-muted);line-height:1.5;margin-bottom:0.75rem;">
+            <strong>Prazo:</strong> Até o dia 15 do mês subsequente à admissão ou alteração de exposição.</p>
+          <p style="font-size:0.825rem;color:var(--text-light);line-height:1.4;">Alimenta o extrato previdenciário do
+            trabalhador no aplicativo Meu INSS.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 14: FERRAMENTAS GRATUITAS (HUB INTERATIVO)
+       ========================================================================= -->
+  <main id="view-tools" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Central de Ferramentas Gratuitas e Calculadoras</h2>
+          <p>Recursos interativos 100% funcionais para apoiar o trabalho diário dos profissionais de SST.</p>
+        </div>
+      </div>
+
+      <!-- Gerador de APR Interativo com Impressão -->
+      <div class="calculator-card" id="apr-generator-card">
+        <div
+          style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;">
+          <div>
+            <span class="badge badge-blue">Ferramenta Interativa</span>
+            <h3 style="font-size:1.25rem;font-weight:800;color:var(--primary);margin-top:0.25rem;">Gerador de Análise
+              Preliminar de Risco (APR)</h3>
+          </div>
+          <button class="btn btn-green" onclick="window.print()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect width="12" height="8" x="6" y="14" />
+            </svg>
+            Imprimir / Salvar APR em PDF
+          </button>
+        </div>
+
+        <div class="printable-document">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Nome da Empresa:</label>
+              <input type="text" value="Engenharia e Manutenção Industrial Ltda.">
+            </div>
+            <div class="form-group">
+              <label>Local / Frente de Trabalho:</label>
+              <input type="text" value="Pátio Industrial e Cobertura do Bloco B">
+            </div>
+            <div class="form-group">
+              <label>Descrição da Atividade Crítica:</label>
+              <input type="text" value="Manutenção em telhado e substituição de telhas metálicas (> 2m)">
+            </div>
+            <div class="form-group">
+              <label>Supervisor Responsável:</label>
+              <input type="text" value="Eng. Lucas Mendonça - CREA 506987">
+            </div>
+          </div>
+
+          <div class="data-table-wrapper">
+            <table class="data-table" id="apr-interactive-form">
+              <thead>
+                <tr>
+                  <th style="width:20%;">Passo da Tarefa</th>
+                  <th style="width:20%;">Perigo / Risco</th>
+                  <th style="width:20%;">Danos Potenciais</th>
+                  <th style="width:25%;">Medidas Preventivas Obrigatórias</th>
+                  <th style="width:10%;">Responsável</th>
+                  <th style="width:5%;">Ação</th>
+                </tr>
+              </thead>
+              <tbody id="apr-steps-tbody">
+                <!-- Linhas inseridas pelo app.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top:0.75rem;">
+            <button class="btn btn-outline" onclick="window.addAPRStep()" style="font-size:0.8125rem;">
+              + Adicionar Passo Operacional à APR
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checklist de Inspeção de Trabalho em Altura (NR-35) -->
+      <div class="calculator-card">
+        <div
+          style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;">
+          <div>
+            <span class="badge badge-vigente">Checklist de Conformidade</span>
+            <h3 style="font-size:1.25rem;font-weight:800;color:var(--primary);margin-top:0.25rem;">Inspeção Pré-Trabalho
+              em Altura (NR-35)</h3>
+          </div>
+          <span id="nr35-checklist-score" style="font-weight:800;font-size:0.95rem;color:var(--blue-accent);">0% de
+            Conformidade (0/10 itens)</span>
+        </div>
+
+        <div id="nr35-checklist-items">
+          <!-- Inserido dinamicamente -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 15: MODELOS DE DOCUMENTOS E DOWNLOADS
+       ========================================================================= -->
+  <main id="view-documents" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Biblioteca de Documentos Técnicos e Modelos Editáveis</h2>
+          <p>Modelos oficiais de APR, PT, Ordem de Serviço, Ficha de EPI, Atas de CIPA e Relatórios de Acidente prontos
+            para uso.</p>
+        </div>
+      </div>
+      <div class="nrs-grid" id="documents-list-grid">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 16: NOTÍCIAS E ATUALIZAÇÕES REGULAMENTARES
+       ========================================================================= -->
+  <main id="view-news" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Notícias e Atualizações Regulamentares Oficiais</h2>
+          <p>Publicações do Diário Oficial da União, novas portarias ministeriais e consultas públicas de SST.</p>
+        </div>
+      </div>
+      <div id="news-list-container">
+        <!-- Inserido dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 17: PAINEL ADMINISTRATIVO & AUDITORIA DE VERSÕES
+       ========================================================================= -->
+  <main id="view-admin" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Painel Administrativo & Controle de Versões Legislativas</h2>
+          <p>Registro histórico e auditoria de todas as alterações normativas realizadas no portal, conforme Item 22.
+          </p>
+        </div>
+      </div>
+
+      <!-- Métricas do Portal -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin-bottom:2rem;"
+        id="admin-metrics-cards">
+        <!-- Inserido dinamicamente -->
+      </div>
+
+      <!-- Tabela de Auditoria de Versões Normativas -->
+      <div class="tech-card">
+        <h3>Histórico e Auditoria de Alterações Normativas no Portal</h3>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1rem;">
+          Toda alteração de conteúdo regulamentar registra o autor, a data/hora, a fonte consultada, a versão anterior e
+          a nova vigência:
+        </p>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Norma</th>
+                <th>Data e Horário</th>
+                <th>Responsável</th>
+                <th>Fonte Oficial</th>
+                <th>Transição de Versões</th>
+                <th>Descrição Detalhada da Mudança</th>
+              </tr>
+            </thead>
+            <tbody id="admin-audit-table-body">
+              <!-- Linhas inseridas pelo app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       VIEW 18: ÁREA DO USUÁRIO & PERFIL
+       ========================================================================= -->
+  <main id="view-user-profile" class="view-container">
+    <div class="container" style="padding-top:2rem;padding-bottom:3rem;">
+      <div class="section-header">
+        <div class="section-title-wrap">
+          <h2 style="font-size:1.85rem;">Área do Usuário e Perfil Profissional</h2>
+          <p>Gerencie suas normas favoritadas, histórico de consultas e documentos técnicos salvos.</p>
+        </div>
+      </div>
+      <div id="user-profile-data-box">
+        <!-- Renderizado dinamicamente -->
+      </div>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       MODAL: LOGIN E CADASTRO
+       ========================================================================= -->
+  <div class="modal-overlay" id="login-modal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="window.closeModal('login-modal')">&times;</button>
+      <h3 style="font-size:1.35rem;font-weight:900;color:var(--primary);margin-bottom:0.5rem;">Área do Profissional SST
+      </h3>
+      <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.5rem;">
+        Entre ou cadastre-se para salvar normas favoritas, histórico de pesquisas com a IA e exportar relatórios
+        personalizados.
+      </p>
+
+      <form id="login-form-element"
+        onsubmit="event.preventDefault(); const email = document.getElementById('user-email').value; const role = document.getElementById('user-role').value; window.SST_AUTH.login(email, '123', role); window.closeModal('login-modal'); window.navigateTo('user-profile');">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="user-email">E-mail Profissional:</label>
+          <input type="email" id="user-email" value="tecnico.sst@empresa.com.br" required>
+        </div>
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label for="user-role">Perfil / Habilitação Profissional:</label>
+          <select id="user-role">
+            <option value="Técnico em Segurança do Trabalho">Técnico em Segurança do Trabalho</option>
+            <option value="Engenheiro de Segurança do Trabalho">Engenheiro de Segurança do Trabalho</option>
+            <option value="Médico do Trabalho">Médico do Trabalho</option>
+            <option value="Enfermeiro do Trabalho">Enfermeiro do Trabalho</option>
+            <option value="Integrante da CIPA">Integrante da CIPA</option>
+            <option value="Gestor / Empresário">Gestor / Empresário</option>
+            <option value="Estudante / Professor">Estudante / Professor</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:0.5rem;">
+          Entrar no Portal SST Brasil
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: VISUALIZADOR DE MODELOS DE DOCUMENTO (IMPRESSÃO / PDF)
+       ========================================================================= -->
+  <div class="modal-overlay" id="document-viewer-modal">
+    <div class="modal-dialog" style="max-width:850px;">
+      <button class="modal-close-btn" onclick="window.closeModal('document-viewer-modal')">&times;</button>
+      <div id="document-modal-content">
+        <!-- Conteúdo do documento inserido dinamicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       RODAPÉ OFICIAL (COM TEXTO OBRIGATÓRIO DA SEÇÃO 27)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            PORTAL SST BRASIL
+          </h3>
+          <p>
+            O portal de referência nacional em Segurança e Saúde no Trabalho, Legislação Trabalhista e Previdenciária.
+            Desenvolvido para atender técnicos, engenheiros, médicos do trabalho, gestores, membros da CIPA e
+            trabalhadores em todo o Brasil.
+          </p>
+          <div style="font-size:0.8125rem;color:#CBD5E1;">
+            <strong>Missão:</strong> Promover a cultura de prevenção, salvar vidas e assegurar a conformidade
+            regulatória nas empresas.
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Normas e Gestão</h4>
+          <ul class="footer-links">
+            <li><a href="#nrs" onclick="window.navigateTo('nrs')">Normas Regulamentadoras</a></li>
+            <li><a href="#gro" onclick="window.navigateTo('gro')">Gerenciamento de Riscos (GRO)</a></li>
+            <li><a href="#pgr" onclick="window.navigateTo('pgr')">Programa de Riscos (PGR)</a></li>
+            <li><a href="#pcmso" onclick="window.navigateTo('pcmso')">PCMSO & Saúde Ocupacional</a></li>
+            <li><a href="#cipa" onclick="window.navigateTo('cipa')">CIPA & Combate ao Assédio</a></li>
+            <li><a href="#epis" onclick="window.navigateTo('epis')">Catálogo de EPIs e EPCs</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ferramentas & IA</h4>
+          <ul class="footer-links">
+            <li><a href="#ai" onclick="window.navigateTo('ai')">Assistente SST Inteligente</a></li>
+            <li><a href="#tools" onclick="window.navigateTo('tools')">Gerador de APR</a></li>
+            <li><a href="#tools" onclick="window.navigateTo('tools')">Calculadora TF e TG (NBR 14280)</a></li>
+            <li><a href="#tools" onclick="window.navigateTo('tools')">Dimensionamento CIPA</a></li>
+            <li><a href="#documents" onclick="window.navigateTo('documents')">Modelos de Documentos</a></li>
+            <li><a href="#trainings" onclick="window.navigateTo('trainings')">Matriz de Treinamentos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Fontes Oficiais</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.gov.br/trabalho-e-emprego/pt-br" target="_blank"
+                rel="noopener noreferrer">Ministério do Trabalho e Emprego</a></li>
+            <li><a href="https://www.in.gov.br" target="_blank" rel="noopener noreferrer">Diário Oficial da União</a>
+            </li>
+            <li><a href="https://www.planalto.gov.br/ccivil_03/" target="_blank" rel="noopener noreferrer">Portal da
+                Legislação (Planalto)</a></li>
+            <li><a href="https://www.gov.br/fundacentro/pt-br" target="_blank" rel="noopener noreferrer">Fundacentro</a>
+            </li>
+            <li><a href="https://www.gov.br/previdencia/pt-br" target="_blank" rel="noopener noreferrer">Previdência
+                Social / INSS</a></li>
+            <li><a href="https://www.gov.br/esocial/pt-br" target="_blank" rel="noopener noreferrer">Portal Oficial do
+                eSocial</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Caixa de Aviso Legal Obrigatório conforme Seção 27 -->
+      <div class="footer-disclaimer-box">
+        <h5>Aviso Legal e Diretriz Institucional:</h5>
+        <p>
+          "Este portal possui finalidade informativa, educativa e de apoio à consulta em Segurança e Saúde no Trabalho.
+          A aplicação das normas e a elaboração de documentos técnicos devem considerar as características de cada
+          atividade, os requisitos legais vigentes e a avaliação dos profissionais legalmente habilitados ou
+          competentes, conforme o caso. O conteúdo deste portal não substitui os textos oficiais, a análise técnica, a
+          orientação jurídica ou as responsabilidades legais das organizações."
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>PORTAL SST BRASIL</strong> — Segurança, Saúde e Prevenção. Todos os direitos reservados.
+        </div>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#legislation" onclick="window.navigateTo('legislation')" style="color:#94A3B8;">Termos de Uso</a>
+          <a href="#pcmso" onclick="window.navigateTo('pcmso')" style="color:#94A3B8;">Política de Privacidade
+            (LGPD)</a>
+          <a href="#admin" onclick="window.navigateTo('admin')" style="color:#94A3B8;">Controle de Versões</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts do Portal -->
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data/nrs.js"></script>
+  <script src="assets/js/data/legislation.js"></script>
+  <script src="assets/js/data/risks.js"></script>
+  <script src="assets/js/data/epis.js"></script>
+  <script src="assets/js/data/trainings.js"></script>
+  <script src="assets/js/data/esocial.js"></script>
+  <script src="assets/js/data/news.js"></script>
+  <script src="assets/js/data/documents.js"></script>
+  <script src="assets/js/data/faq.js"></script>
+  <script src="assets/js/modules/ai-assistant.js"></script>
+  <script src="assets/js/modules/tools.js"></script>
+  <script src="assets/js/modules/generators.js"></script>
+  <script src="assets/js/modules/user-auth.js"></script>
+  <script src="assets/js/modules/admin.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+</html>
